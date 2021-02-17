@@ -1,0 +1,78 @@
+.header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: var(--gray);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.header-right .title {
+  font-size: 18px;
+}
+
+.main-title {
+  font-weight: bold;
+}
+
+.header-left {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+}
+
+.nav-link {
+  max-width: 130px;
+  height: 100%;
+  padding: 3px 5px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.multi-langueage {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.selected-lang {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.selected-lang img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.list-langs {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.one-lang {
+  padding-bottom: 4px;
+}
