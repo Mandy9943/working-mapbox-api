@@ -1,9 +1,12 @@
 import React from "react";
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import mapboxgl from "mapbox-gl";
 import "./Map.css";
 import { IInitialMap, IProvince, markers } from "../../data";
 import ComboBox from "../ComboBox/ComboBox";
+import mapboxgl from "mapbox-gl";
+
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 interface IProps {
   initialMap: IInitialMap;
@@ -28,7 +31,6 @@ class Map extends React.Component<IProps> {
       center: [this.props.initialMap.lng, this.props.initialMap.lat],
       zoom: this.props.initialMap.zoom,
     });
-    console.log("Map ", this.map);
 
     const map = this.map;
 
